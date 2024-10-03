@@ -6,8 +6,8 @@ import Layout, { siteTitle } from '../components/layout'
 const WorkCard = ({ title, description, imgSrc, url, tags }) => (
   <div className="cursor-pointer max-w-sm rounded-lg overflow-hidden shadow-lg p-3 border mt-2">
     <h2 className="font-bold text-xl my-1 text-center">{title}</h2>
-    <Link href={url}>
-      <img src={imgSrc} width={320} height={320} className="m-auto" />
+    <Link href={url} target="_blank">
+      <img src={imgSrc} width={320} height={320} className="m-auto"/>
     </Link>
     <div className="px-6 py-2">
       <p className="text-gray-700 text-base">{description}</p>
@@ -39,7 +39,7 @@ export default function Projects() {
                 title="ProgTouch"
                 description="自然言語の選択によりスマホからプログラミングを学習するWebアプリケーション"
                 imgSrc="/images/ProgTouch_img.png"
-                url="https://prog-touch.vercel.app/"
+                url="https://github.com/HirokiOka/prog-touch"
                 tags={['TypeScript', 'React', 'Next.js', 'PostgreSQL']}
               />
               <WorkCard 
@@ -53,10 +53,17 @@ export default function Projects() {
                 title="/Shot"
                 description="ビジュアルプログラミングで対戦するプログラミング未経験者向けシューティングゲーム (神戸市立青少年科学館で展示中)"
                 imgSrc="/images/SlashShot_system.png"
-                url="https://www.kobe-kagakukan.jp/topics/archives/291"
+                url="https://www.kobe-u.ac.jp/ja/announcement/2023_11_01_01/"
                 tags={['JavaScript', 'Node.js', 'Electron', 'Socket.io', 'MongoDB', 'Raspberry Pi']}
               />
             </div>
+            <WorkCard 
+              title="本へのプロジェクションによる読書体験拡張"
+              description="ウェアラブルプロジェクタから紙の書籍に情報を投影し，読書体験を拡張するシステム"
+              imgSrc="/images/book-proj.jpg"
+              url="https://drive.google.com/drive/u/0/folders/1arQthlk7_W19rMWrj95iYP-YIohr6bhF"
+              tags={['Python', 'Processing', 'openCV']}
+            />
           </div>
 
 
@@ -72,8 +79,15 @@ export default function Projects() {
               tags={['openFrameworks', 'Sonic Pi']}
             />
             <WorkCard
+              title="How to behave?"
+              description="Light-Keeperをもとに実装した屋内展示用インタラクティブ作品．ProcessingCommunityDay2023にて展示"
+              imgSrc="/images/howToBehave.png"
+              url="https://youtu.be/ydcIlOPgkBE"
+              tags={['openFrameworks', 'Sonic Pi']}
+            />
+            <WorkCard
               title="p5 sketches"
-              description="p5.jsを使ったクリエイティブコーディング作品集"
+              description="p5.jsを使ったクリエイティブコーディング習作集"
               imgSrc="/images/sketch.png"
               url="https://neort.io/Gt8eI4ixzzfU5PAG1jp6vX7qJNx2"
               tags={['JavaScript', 'p5.js']}
@@ -109,28 +123,36 @@ export default function Projects() {
           <div className='grid grid-flow-col auto-cols-max'>
 
             <WorkCard
+              title="Tsukaken 20th Anniversary HMD Show"
+              description="神戸大学塚本寺田研究室20周年記念式典で開催されたHMDショーの統括・演出およびシステム実装を担当"
+              imgSrc="/images/HMD_show.jpg"
+              url="https://youtu.be/9a2aqYyi790?si=5Phzx87FOx_FeF90"
+              tags={['openFrameworks', 'Sonic Pi']}
+            />
+
+            <WorkCard
               title="つぶやき書店"
-              description="ユーザがTwitterでいいねしたtweetを分析し，それと内容の似た本をレコメンドすることで，まだ出会ったことのない本との「新しい出会い」を創出するWebアプリ"
+              description="ユーザがTwitterでいいねしたtweetを分析し，それと内容の似た本をレコメンドすることで，まだ出会ったことのない本との「新しい出会い」を創出するWebアプリ (🚧現在X API対応のため工事中🚧)"
               imgSrc="/images/tsubuyaki-syoten.png"
               url="https://tsubuyaki-syoten.adaptable.app/"
               tags={['JavaScript', 'Vue.js', 'Python', 'Flask']}
             />
             <WorkCard
               title="JS_Typing"
-              description="GitHub上のソースコードをタイプしていくタイピングゲーム"
+              description="GitHub上のソースコードを題材に，写経しながらタイピング練習できるタイピングゲーム"
               imgSrc="/images/js_type.png"
               url="https://js-typing.adaptable.app/"
               tags={['JavaScript', 'Node.js']}
             />
+        </div>
             <WorkCard
               title="Tozan King"
-              description="某高難易度ゲームをモチーフにした2Dブラウザゲーム" 
+              description="某高難易度ゲームをモチーフにした2Dブラウザゲーム (研究室余興用)" 
               imgSrc="/images/tozan_king.png"
               url="https://hirokioka.github.io/jump-game/"
               tags={['JavaScript', 'p5.js']}
             />
 
-        </div>
       </div>
     </div>
 
