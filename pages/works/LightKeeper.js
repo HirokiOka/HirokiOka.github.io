@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout, { siteTitle, name } from '../../components/layout';
+import Layout, { siteTitle, name } from '../../components/Layout';
 import ProjectDetail from '../../components/ProjectDetail';
 import SkillTags from '../../components/SkillTags';
 import ProjectImages from '../../components/ProjectImages';

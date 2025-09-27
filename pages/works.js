@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle } from '../components/Layout'
 import SkillTags from '../components/SkillTags';
 
 const WorkCard = ({ title, description, imgSrc, url, tags }) => (
